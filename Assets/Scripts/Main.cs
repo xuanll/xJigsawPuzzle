@@ -25,7 +25,8 @@ public class Main : MonoBehaviour
 		List<Block> blocks = mBlocks.getBlockList ();
 
 		UITexture UIT;
-		for (int i = 0; i < blocks.Count; i++) {
+		for (int i = 0; i < blocks.Count; i++) 
+		{
 			GameObject go = AddChild (target, "block" + i, uiTexturePrefeb);
 
 
@@ -77,8 +78,10 @@ public class Main : MonoBehaviour
 		private void setBlockArr ()
 		{
 			Block tBlock;
-			for (int i = 0; i < this._rows; i++) {
-				for (int j = 0; j<this._cols; j++) {
+			for (int i = 0; i < this._rows; i++) 
+			{
+				for (int j = 0; j<this._cols; j++) 
+				{
 					tBlock = new Block (i, j, this._rows, this._cols, this._sizeX, this._sizeY);
 					this._blockList.Add (tBlock);
 				}
@@ -128,7 +131,8 @@ public class Main : MonoBehaviour
 		if (!string.IsNullOrEmpty (pName))
 			go.name = pName;
 		
-		if (pParent != null) {
+		if (pParent != null) 
+		{
 			Transform t = go.transform;
 			t.parent = pParent.transform;
 			t.localPosition = Vector3.zero;
